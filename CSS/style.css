@@ -1,0 +1,1154 @@
+/*Head---------------------------------------------------------------------*/
+.Menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6vh;
+  background-color: #7575756c;
+  color: white;
+  padding: 3vh 0;
+  word-spacing: 78vh;
+  border-radius: 0% 0% 10% 10%;
+  z-index: 1000; /* Чтобы меню не перекрывалось другими элементами */
+}
+
+.Menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 1vh;
+  display: flex;
+  justify-content: center;
+}
+
+.Menu li {
+  margin: 0 10vh;
+}
+
+.Menu a {
+  color: white;
+  text-decoration: none;
+}
+
+#AppleItem {
+  position: relative;
+  right: 40vh;
+  width: 4vh;
+  padding: 1vh;
+  margin: 1vh;
+  bottom: 3vh;
+  padding-right: 4vh;
+}
+
+#iPhone_16 {
+    flex: 0 1 auto;
+    padding: auto;
+    margin: auto;
+    font-size: 3vh;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+#iPhone_16_Pro {
+    flex: 0 1 auto;
+    padding: auto;
+    margin: auto;
+    font-size: 3vh;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+/*Main---------------------------------------------------------------------*/
+
+body {
+    background: linear-gradient(to bottom, #dcd2ff, rgb(255, 255, 255));
+    background-repeat: no-repeat;
+    background-color: rgb(255, 255, 255);
+    margin: 0;
+    padding-top: 10vh; /* Высота меню + немного отступа */
+}
+
+/*Lobby Window-------------------------------------------------------------*/
+/*Block 1*/
+.fade-block {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-block.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Улучшение: убрать анимацию, если пользователь не хочет её */
+@media (prefers-reduced-motion: reduce) {
+  .fade-block {
+    transition: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+#Hello {
+    text-align: center;
+    position: relative;
+    font-size: 9vh;
+    top: 30vh;
+}
+
+#design {
+    position: absolute;
+    font-size: 15vh;
+    color: rgb(0, 0, 80);
+    top: 105vh;
+    left: 26vh;
+    padding-left: 4vh;
+}
+
+.img-slider1 {
+  position: relative;
+  padding: 1vh;
+  width: 100vh;
+  height: 65vh;
+  overflow: hidden;
+}
+
+.slide1 {
+  position: absolute;
+  padding: 1vh;
+  top: 100vh;
+  left: 4vh;
+  width: 192vh;
+  height: 100vh;
+  border-radius: 1cm;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out; /* ← плавный переход */
+}
+
+.slide1.active {
+  opacity: 1;
+}
+
+/*Block 2*/
+
+/*Плавное появление блоков
+/* Скрытый вид (до появления) */
+.fade-in-on-scroll {
+  opacity: 0;
+  transform: translateY(20px); /* лёгкий сдвиг вниз */
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* Видимый вид (после появления) */
+.fade-in-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Уважаем пользователей с prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  .fade-in-on-scroll {
+    transition: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+#new_colors {
+    font-size: 12vh;
+    padding: 4vh;
+    margin: 2vh;
+    left: 7vh;
+    color: #000000;
+    background-color: #fffd9b;
+    width: 80vh;
+    border-radius: 5% 30% 5% 5%;
+}
+
+#bubble {
+    font-size: 12vh;
+    text-align: right;
+    padding: 4vh;
+    margin: 2vh;
+    left: 7vh;
+    color: #000000;
+    background-color: #ff9b9b;
+    width: 80vh;
+    border-radius: 5% 5% 5% 30%; 
+}
+
+.Color {
+    position: relative;
+    top: 210vh;
+}
+
+.gallery1 {
+  text-align: center;
+  margin: 7vh;
+}
+
+.image-container {
+  position: relative;
+  width: 60vh;
+  height: 80vh;
+  margin: 0 auto;
+}
+
+.gallery1 img {
+  position: absolute;
+  top: 100vh;
+  left: 52vh;
+  width: 68vh;
+  height: 88vh;
+  object-fit: cover;
+  border-radius: 2vh;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.gallery1 img.fade-out {
+  opacity: 0;
+}
+
+.image-buttons button {
+  position: relative;
+  margin: 1vh;
+  padding: 3vh 3vh;
+  top: 107vh;
+  left: 55vh;
+  height: 5vh;
+  width: 5vh;
+  cursor: pointer;
+  background: #000000;
+  color: rgb(0, 0, 0);
+  border-color: #0000005d;
+  border-radius: 40vh;
+}
+
+.image-buttons button:hover {
+  top: 107vh;
+  left: 55vh;
+  background-color: #1a1a1a;
+}
+
+#Green {
+  background-color: aqua;
+}
+
+#Green:hover {
+  background-color: rgb(169, 255, 255);
+}
+
+#Blue {
+  background-color: rgb(17, 0, 255);
+}
+
+#Blue:hover {
+  background-color: rgb(68, 55, 255);
+}
+
+#Pink {
+  background-color: rgb(255, 0, 106);
+}
+
+#Pink:hover {
+  background-color: rgb(255, 69, 147);
+}
+
+/*Block 3*/
+
+#strongs {
+  position: relative;
+  top: 150vh;
+  right: 6vh;
+  font-size: 13vh;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: #17003d;
+  padding: 2vh;
+  margin: 2vh;
+}
+
+#strong1 {
+  position: relative;
+  bottom: 20vh;
+  left: 3vh;
+}
+
+#strong2 {
+  position: relative;
+  bottom: 40vh;
+  right: 10vh;
+}
+
+#strong3 {
+  position: relative;
+  font-size: 38vh;
+  bottom: 15vh;
+  right: 7vh;
+}
+
+#strong4 {
+  position: relative;
+  bottom: 40vh;
+  right: 4vh;
+}
+
+#strong5 {
+  position: relative;
+  bottom: 40vh;
+  left: 160vh;
+}
+
+/*Camera_Action*/
+#Camera_Action {
+  position: relative;
+  top: 140vh;
+  background-color: #ffe1bb;
+  height: 90vh;
+}
+
+#Action {
+  position: relative;
+  height: 90vh;
+  width: 80vh;
+  right: 2vh;
+  border-radius: 0% 20% 20% 0%;
+  border-style: none;
+}
+
+#CameraControl {
+  position: relative;
+  height: 90vh;
+  width: 80vh;
+  left: 43vh;
+  border-radius: 20% 0% 0% 20%;
+  border-style: none;
+}
+
+/*Буквы к картинкам*/
+#Ca {
+  font-size: 3vh;
+  color: #17003d;
+}
+
+/*Слева*/
+#s1 {
+  position: relative;
+  bottom: 90vh;
+  left: 73vh;
+}
+
+#s2 {
+  position: relative;
+  bottom: 85vh;
+  left: 75vh;
+}
+
+#s3 {
+  position: relative;
+  bottom: 79vh;
+  left: 74vh;
+}
+
+#s4 {
+  position: relative;
+  bottom: 72vh;
+  left: 72vh;
+}
+
+#s5 {
+  position: relative;
+  bottom: 65vh;
+  left: 70vh;
+}
+
+#s6 {
+  position: relative;
+  bottom: 58vh;
+  left: 67vh;
+}
+
+#s7 {
+  position: relative;
+  bottom: 39vh;
+  left: 64vh;
+}
+
+#s8 {
+  position: relative;
+  bottom: 32vh;
+  left: 61vh;
+}
+
+#s9 {
+  position: relative;
+  bottom: 25vh;
+  left: 58vh;
+}
+
+#s10 {
+  position: relative;
+  bottom: 18vh;
+  left: 55vh;
+}
+
+#s11 {
+  position: relative;
+  bottom: 11vh;
+  left: 51vh;
+}
+
+#s12 {
+  position: relative;
+  bottom: 5vh;
+  left: 44vh;
+}
+
+/*Справа*/
+#s13 {
+  position: relative;
+  bottom: 90vh;
+  left: 95vh;
+}
+
+#s14 {
+  position: relative;
+  bottom: 85vh;
+  left: 88vh;
+}
+
+#s15 {
+  position: relative;
+  bottom: 78vh;
+  left: 83vh;
+}
+
+#s16 {
+  position: relative;
+  bottom: 71vh;
+  left: 80vh;
+}
+
+#s17 {
+  position: relative;
+  bottom: 64vh;
+  left: 77vh;
+}
+
+#s18 {
+  position: relative;
+  bottom: 58vh;
+  left: 74vh;
+}
+
+#s19 {
+  position: relative;
+  bottom: 43vh;
+  left: 71vh;
+}
+
+#s20 {
+  position: relative;
+  bottom: 36vh;
+  left: 68vh;
+}
+
+#s21 {
+  position: relative;
+  bottom: 29vh;
+  left: 66vh;
+}
+
+#s22 {
+  position: relative;
+  bottom: 22vh;
+  left: 63vh;
+}
+
+#s23 {
+  position: relative;
+  bottom: 15vh;
+  left: 61vh;
+}
+
+#s24 {
+  position: relative;
+  bottom: 9vh;
+  left: 61vh;
+}
+
+#s25 {
+  position: relative;
+  bottom: 4vh;
+  left: 63vh;
+}
+
+/*Block 4*/
+#NChCon {
+  color: #ffffff;
+  position: relative;
+  top: 167vh;
+  left: 2vh;
+  font-size: 8vh;
+  font-family: 'Times New Roman', Times, serif;
+  word-spacing: 1vh;
+  z-index: 50;
+}
+
+#ConEasBet {
+  position: relative;
+  text-align: right;
+  color: #260063;
+  top: 160vh;
+  font-size: 6vh;
+  word-spacing: 2vh;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 1vh;
+  z-index: 25;
+}
+
+#TypeC {
+  position: relative;
+  height: 85vh;
+  top: 25vh;
+  width: 100%;
+  right: 6vh;
+  border-radius: 0cm 2cm 2cm 0cm;
+}
+
+#NchAndConEas {
+  position: relative;
+  top: 145vh;
+  background-color: #000000;
+  height: 220vh;
+  z-index: 1;
+}
+
+/*Block 5*/
+#blue1 {
+  position: relative;
+  font-size: 7vh;
+  color: #ff9b9b;
+  z-index: 10;
+  top: 65vh;
+  margin: 3vh;
+  font-family: cursive;
+  letter-spacing: 1vh;
+}
+
+#pink1 {
+  position: relative;
+  text-align: right;
+  font-size: 7vh;
+  color: #260063;
+  z-index: 11;
+  top: 42vh;
+  margin: 3vh;
+  font-family: cursive;
+  letter-spacing: 1vh;
+}
+
+/*Slider*/
+
+/* Секция галереи */
+.gallery-section {
+  position: relative;
+  padding: 20vh 10vh;
+  text-align: center;
+  background: #000000;
+  z-index: 5;
+  top: 10vh;
+  max-width: 100%;
+}
+
+/* Слайдер изображений */
+.image-slider {
+  position: relative;
+  width: 90%;
+  max-width: 250vh;
+  height: 90vh;
+  top: 10vh;
+  margin: 10vh auto;
+  overflow: hidden;
+  border-radius: 7vh;
+  box-shadow: 0 4vh 10vh rgba(0, 0, 0, 0.12);
+  z-index: 501;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 500;
+}
+
+/* Активный слайд по умолчанию */
+.slide.active {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* Следующий слайд — изначально невидим (позиция задаётся в JS) */
+.slide.next {
+  opacity: 1;
+}
+
+/* Плавная анимация */
+.slide.animate {
+  transition: 
+    transform 0.6s cubic-bezier(0.65, 0, 0.35, 1),
+    opacity 0.6s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+/* Всплывающее меню — снизу по центру */
+.popup-menu {
+  position: fixed;
+  bottom: 1vh;
+  left: 50%;
+  transform: translateX(-50%) translateY(100%);
+  background: rgba(194, 194, 194, 0.562);
+  border: 1vh solid #e0e0e09a;
+  box-shadow: 0 4vh 11vh rgba(0, 0, 0, 0.2);
+  z-index: 2000;
+  padding: 7vh;
+  border-radius: 6vh;
+  max-width: 25%;
+  max-height: 15%;
+  width: 20%;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    visibility 0.4s ease;
+}
+
+.popup-menu.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+.popup-menu button {
+  display: block;
+  position: relative;
+  bottom: 6vh;
+  width: 100%;
+  padding: 1vh;
+  margin: 2vh 0;
+  background: #b9b9b980;
+  border: none;
+  border-radius: 3vh;
+  cursor: pointer;
+  font-size: 4vh;
+  font-weight: 500;
+  color: #222;
+  transition: 
+    background 0.2s, 
+    transform 0.15s;
+}
+
+.popup-menu button:hover {
+  background: #e9ecef;
+  transform: translateY(-1px);
+}
+
+/*iPhone 16_stat Window-------------------------------------------------------------*/
+.text_3d {
+  position: relative;
+  font-family: 'Arial Black', sans-serif;
+  font-size: 25vh;
+  text-align: center;
+  top: 1vh;
+  background: linear-gradient(75 deg, #9e83ff, rgb(255, 123, 189));
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  color: rgba(255, 81, 212, 0.281);
+  z-index: 253;
+
+  /* Многослойная тень для объёма */
+  text-shadow:
+    0 1px 0 #ccc,
+    0 2px 0 #c9c9c9,
+    0 3px 0 #bbb,
+    0 4px 0 #b9b9b9,
+    0 5px 0 #aaa,
+    0 6px 1px rgba(0,0,0,.1),
+    0 0 5px rgba(0,0,0,.1),
+    0 1px 3px rgba(0,0,0,.3),
+    0 3px 5px rgba(0,0,0,.2),
+    0 5px 10px rgba(0,0,0,.25),
+    0 10px 10px rgba(0,0,0,.2),
+    0 20px 20px rgba(0,0,0,.15);
+}
+
+#Phon_stat {
+  position: absolute;
+  height: 105vh;
+  width: 100%;
+  bottom: 0;
+  padding: 0;
+  margin: 0;
+  z-index: 8;
+}
+
+#h1 {
+  position: relative;
+  text-align: left;
+  font-size: 5vh;
+  top: 40vh;
+  left: 6vh;
+  margin: 0;
+  padding: 0;
+  font-family: 'Times New Roman', cursive;
+  color: #3a3a3a;
+  text-decoration: underline;
+}
+
+#h2 {
+  position: relative;
+  text-align: left;
+  font-size: 4vh;
+  font-family: cursive;
+  top: 45vh;
+  left: 6vh;
+  padding: 0vh;
+  margin: 0;
+}
+
+#Colors_stat {
+  position: relative;
+  height: 70vh;
+  width: 90vh;
+  bottom: 10vh;
+  left: 105vh;
+  border-radius: 2em;
+}
+
+#h3 {
+  position: relative;
+  text-align: left;
+  font-size: 5vh;
+  bottom: 0vh;
+  left: 6vh;
+  margin: 0;
+  padding: 0;
+  font-family: 'Times New Roman', cursive;
+  color: #3a3a3a;
+  text-decoration: underline;
+}
+
+#RAM {
+  position: relative;
+  text-align: left;
+  font-size: 4vh;
+  font-family: cursive;
+  bottom: 0vh;
+  padding: 7vh;
+  margin: 0;
+}
+
+#h4 {
+  position: relative;
+  text-align: left;
+  font-size: 5vh;
+  bottom: 0vh;
+  left: 6vh;
+  font-family: 'Times New Roman', cursive;
+  color: #3a3a3a;
+  text-decoration: underline;
+  padding: 0vh;
+  margin: 0vh;
+}
+
+#Chip {
+  position: relative;
+  text-align: left;
+  font-size: 4vh;
+  top: 5vh;
+  left: 6vh;
+  font-family: cursive;
+  padding: 0vh;
+  margin: 0vh;
+}
+
+#A18_photo {
+  position: relative;
+  height: 60vh;
+  width: 90vh;
+  border-radius: 2em;
+  bottom: 60vh;
+  left: 105vh;
+}
+
+#BlackBlock {
+  position: relative;
+  padding: 0vh;
+  margin: 0vh;
+  bottom: 30vh;
+  width: 100%;
+  height: 200vh;
+  background-color: #000000;
+  border-radius: 25% 1% 25% 1%;
+}
+
+#h5 {
+  position: relative;
+  text-align: right;
+  font-size: 5vh;
+  font-family: 'Times New Roman', cursive;
+  color: #b4b4b4;
+  text-decoration: underline;
+  right: 4vh;
+  top: 25vh;
+  padding: 0vh;
+  margin: 0vh;
+}
+
+#display {
+  position: relative;
+  text-align: right;
+  font-family: cursive;
+  right: 4vh;
+  font-size: 4vh;
+  color: #dbdbdb;
+  top: 29vh;
+  line-height: 8vh;
+  padding: 0vh;
+  margin: 0vh;
+}
+
+#display_img {
+  position: relative;
+  height: 80vh;
+  width: 110vh;
+  left: 12vh;
+  bottom: 33vh;
+  border-radius: 35% 5% 20% 5%;
+  padding: 0vh;
+  margin: 0vh;
+}
+
+#duym {
+  position: relative;
+  color: #dbdbdb;
+  text-align: center;
+  font-family: cursive;
+  bottom: 20vh;
+  font-size: 4vh;
+  padding: 0vh;
+  margin: 0vh;
+}
+
+#text_1 {
+  position: relative;
+  text-align: left;
+  font-size: 5vh;
+  font-family: cursive;
+  color: hsl(39, 100%, 85%);
+  left: 4vh;
+  line-height: 10vh;
+  bottom: 12vh;
+  padding: 0vh;
+  margin: 0vh;
+}
+
+#text_2 {
+  position: relative;
+  text-align: right;
+  font-size: 4vh;
+  font-family: cursive;
+  color: #ffafca;
+  line-height: 10vh;
+  bottom: 42vh;
+  right: 6vh;
+  padding: 0vh;
+  margin: 0vh;
+}
+
+#text_3 {
+  position: relative;
+  text-align: center;
+  font-size: 4vh;
+  font-family: cursive;
+  color: #cefdff;
+  line-height: 9vh;
+  bottom: 85vh;
+  right: 7vh;
+  padding: 0vh;
+  margin: 0vh;
+}
+
+#h6 {
+  position: relative;
+  text-align: center;
+  font-size: 7vh;
+  font-family: 'Times New Roman', cursive;
+  color: #969696;
+  text-decoration: underline;
+  top: 15vh;
+  padding: 0;
+  margin: 0;
+}
+
+#Camera_photo {
+  position: relative;
+  font-size: 4vh;
+  font-family: cursive;
+  text-align: left;
+  top: 35vh;
+  line-height: 8vh;
+  background-color: #17003d52;
+  border-radius: 5% 15% 15% 5%;
+  width: 60vh;
+  padding: 8vh 3vh;
+  margin: 0;
+}
+
+#Camera_16i {
+  position: relative;
+  height: 85vh;
+  width: 140vh;
+  bottom: 50vh;
+  left: 70vh;
+  border-radius: 15% 5% 5% 15%;
+  padding: 0;
+  margin: 0;
+}
+
+#h7 {
+  position: relative;
+  text-align: center;
+  font-size: 7vh;
+  font-family: 'Times New Roman', cursive;
+  color: #969696;
+  text-decoration: underline;
+  bottom: 25vh;
+  padding: 0;
+  margin: 0;
+}
+
+#Video {
+  position: relative;
+  text-align: center;
+  font-size: 4vh;
+  font-family: cursive;
+  background-color: #63003a75;
+  border-radius: 15% 5% 15% 5%;
+  line-height: 9vh;
+  width: 170vh;
+  left: 10vh;
+  bottom: 10vh;
+  padding: 9vh 6vh;
+  margin: 0;
+}
+
+#Video_img {
+  position: relative;
+  height: 100vh;
+  width: 200vh;
+  top: 10vh;
+  border-radius: 15% 5% 5% 15%;
+  padding: 0;
+  margin: 0;
+}
+
+/*iPhone 16Pro_stat Window-------------------------------------------------------------*/
+
+#PhonPro_Stat {
+  position: absolute;
+  height: 117vh;
+  top: 0vh;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  z-index: 9;
+}
+
+#h1_Pro {
+  position: relative;
+  text-align: left;
+  font-size: 5vh;
+  left: 6vh;
+  top: 114vh;
+  margin: 0;
+  padding: 0;
+  font-family: 'Times New Roman', cursive;
+  color: #3a3a3a;
+  text-decoration: underline;
+}
+
+#colors_pro {
+  position: relative;
+  text-align: left;
+  font-size: 4vh;
+  font-family: cursive;
+  left: 6vh;
+  top: 120vh;
+  padding: 0vh;
+  margin: 0;
+}
+
+#img_colors_pro {
+  position: relative;
+  height: 90vh;
+  width: 100vh;
+  top: 55vh;
+  left: 100vh;
+}
+
+#h2_Pro {
+  position: relative;
+  text-align: left;
+  font-size: 5vh;
+  left: 6vh;
+  top: 55vh;
+  margin: 0;
+  padding: 0;
+  font-family: 'Times New Roman', cursive;
+  color: #3a3a3a;
+  text-decoration: underline;
+}
+
+#RAM_pro {
+  position: relative;
+  text-align: center;
+  font-size: 4vh;
+  font-family: cursive;
+  left: 5vh;
+  top: 50vh;
+  word-spacing: 14vh;
+  padding: 0vh;
+  margin: 0;
+}
+
+#Gold_Block {
+  position: relative;
+  padding: 0vh;
+  margin: 0vh;
+  top: 70vh;
+  width: 100%;
+  height: 180vh;
+  background-color: #000000f8;
+  border-radius: 1% 40% 40% 1%;
+}
+
+#h3_Pro {
+  position: relative;
+  text-align: left;
+  font-size: 5vh;
+  left: 6vh;
+  top: 5vh;
+  margin: 0;
+  padding: 0;
+  font-family: 'Times New Roman', cursive;
+  color: #1b007e;
+  text-decoration: underline;
+}
+
+#display_pro {
+  position: relative;
+  text-align: left;
+  font-size: 4vh;
+  font-family: cursive;
+  left: 5vh;
+  top: 10vh;
+  padding: 0vh;
+  margin: 0;
+  color: rgb(129, 129, 129);
+}
+
+#display_Pro_img {
+  position: absolute;
+  height: 80vh;
+  width: 80vh;
+  left: 90vh;
+  bottom: 80vh;
+}
+
+#display_pro_text {
+  position: relative;
+  text-align: center;
+  font-size: 4vh;
+  font-family: cursive;
+  right: 3vh;
+  top: 30vh;
+  padding: 0vh;
+  margin: 0;
+  line-height: 8vh;
+  color: rgb(129, 129, 129);
+}
+
+#h4_Pro {
+  position: relative;
+  text-align: left;
+  font-size: 5vh;
+  left: 6vh;
+  top: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: 'Times New Roman', cursive;
+  color: #3a3a3a;
+  text-decoration: underline;
+}
+
+#Chip_pro {
+  position: relative;
+  text-align: left;
+  font-size: 4vh;
+  font-family: cursive;
+  left: 5vh;
+  top: 105vh;
+  line-height: 8vh;
+  padding: 0vh;
+  margin: 0;
+}
+
+#Chip_pro_img {
+  position: relative;
+  height: 65vh;
+  width: 95vh;
+  left: 105vh;
+  top: 45vh;
+  border-radius: 5em 5em 5em 5em;
+}
+
+#h5_Pro {
+  position: relative;
+  text-align: center;
+  font-size: 7vh;
+  top: 70vh;
+  margin: 0;
+  padding: 0;
+  font-family: 'Times New Roman', cursive;
+  color: #3a3a3a;
+  text-decoration: underline;
+}
+
+#Camera_16Pro {
+  position: relative;
+  text-align: left;
+  background-color: #130058;
+  border-radius: 1% 10% 10% 1%;
+  width: 70vh;
+  font-size: 4vh;
+  font-family: cursive;
+  left: 0vh;
+  top: 80vh;
+  padding: 2vh 2vh; 
+  margin: 0;
+}
+
+#Camera_Pro_img {
+  position: relative;
+  height: 95vh;
+  width: 135vh;
+  left: 74vh;
+  bottom: 15vh;
+  border-radius: 3em 0em 0em 3em;
+}
