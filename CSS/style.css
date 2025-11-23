@@ -222,6 +222,7 @@ body {
   cursor: pointer;
   background: #000000;
   color: rgb(0, 0, 0);
+  border-style: none;
   border-color: #0000005d;
   border-radius: 40vh;
 }
@@ -1151,4 +1152,5 @@ body {
   left: 74vh;
   bottom: 15vh;
   border-radius: 3em 0em 0em 3em;
+
 }
